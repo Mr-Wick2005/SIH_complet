@@ -1,9 +1,12 @@
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useEffect, useState } from "react";
 import { mockReports, categoryColors, Report } from "../lib/mock-data";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 export function MapView() {
-  const [isHeatmapMode, setIsHeatmapMode] = useState(false);
+  const [isHeatmapMode,  setIsHeatmapMode] = useState(false);
   const [selectedReport, setSelectedReport] = useState<Report | null>(null);
   const [reports, setReports] = useState<Report[]>([]);
 
